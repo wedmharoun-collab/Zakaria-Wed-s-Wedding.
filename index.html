@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding RSVP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, select, button {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #d4b48c;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1>You're Invited!</h1>
+  <p>Please RSVP to our wedding.</p>
+  <form action="https://formspree.io/f/xdabpnpn" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="rsvp">Will you attend?</label>
+    <select id="rsvp" name="rsvp" required>
+      <option value="">Please select</option>
+      <option value="Yes">Yes, I will attend</option>
+      <option value="No">No, I cannot attend</option>
+    </select>
+
+    <button type="submit">Send RSVP</button>
+  </form>
+</body>
+</html>
